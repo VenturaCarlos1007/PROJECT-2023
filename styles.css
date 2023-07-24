@@ -5,14 +5,14 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #ff6f69;
     color: #fff;
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #444;
+    background-color: #ffcc5c;
     padding: 5px;
 }
 
@@ -44,6 +44,7 @@ main {
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
+    background-color: #f0f0f0;
 }
 
 .product img {
@@ -54,6 +55,11 @@ main {
 
 .product h2 {
     margin-top: 10px;
+    color: #333;
+}
+
+.product p {
+    color: #555;
 }
 
 .product button {
@@ -68,6 +74,6 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #ff6f69;
     color: #fff;
 }
