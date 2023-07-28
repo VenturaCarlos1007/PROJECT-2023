@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,14 +6,14 @@ body {
 }
 
 header {
-    background-color: #ff6f69;
+    background-color: #007bff; 
     color: #fff;
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #ffcc5c;
+    background-color: #333; 
     padding: 5px;
 }
 
@@ -30,6 +31,11 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: transform 0.3s ease; 
+}
+
+nav ul li a:hover {
+    transform: scale(1.2); 
 }
 
 main {
@@ -63,7 +69,7 @@ main {
 }
 
 .product button {
-    background-color: #007bff;
+    background-color: #007bff; 
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -74,6 +80,6 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #ff6f69;
+    background-color: #333; 
     color: #fff;
 }
