@@ -6,3 +6,5 @@ addToCartButtons.forEach(button => {
         alert(`¡${productName} ha sido agregado al carrito!`);
     });
 });
+
+Console.log("Hola Mundo");
