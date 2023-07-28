@@ -8,3 +8,6 @@ addToCartButtons.forEach(button => {
 });
 
 Console.log("Hola Mundo");
+
+
+Console.log("Hola");
