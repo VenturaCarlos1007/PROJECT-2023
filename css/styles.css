@@ -1,6 +1,9 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
     margin: 0;
     padding: 0;
 }
@@ -51,11 +54,11 @@ main {
     margin: 10px;
     padding: 10px;
     background-color: #f0f0f0;
-    transition: transform 0.3s ease; /* Animación en hover */
+    transition: transform 0.3s ease; 
 }
 
 .product:hover {
-    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
+    transform: scale(1.05); 
 }
 
 .product img {
@@ -129,65 +132,28 @@ footer {
     color: #007bff; 
 }
 
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-    }
+.category-menu ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
 
-    #navMenu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        z-index: 1;
-    }
+.category-menu li {
+    margin-right: 20px;
+}
 
-    #navMenu.show {
-        display: block;
-    }
+.category-menu li:last-child {
+    margin-right: 0; 
+}
 
-    #navMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+.category-menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    padding: 10px; 
+}
 
-    #navMenu ul li {
-        margin-bottom: 10px;
-    }
-
-    #navMenu ul li a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-    .category-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .category-menu.show {
-        display: block;
-    }
-
-    .category-menu li {
-        margin-bottom: 10px;
-    }
-
-    .category-menu li a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
+.category-menu li a:hover {
+    transform: scale(1.1); 
 }
