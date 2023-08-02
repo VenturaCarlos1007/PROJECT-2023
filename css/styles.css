@@ -3,20 +3,16 @@ body {
     margin: 0;
     padding: 0;
 }
-body {
-    margin: 0;
-    padding: 0;
-}
 
 header {
-    background-color: #007bff; 
-    color: #fff;
+    background-color: #FF0000; 
+    color: #000; 
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #333; 
+    background-color: #FF0000;
     padding: 5px;
 }
 
@@ -32,13 +28,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000; 
     text-decoration: none;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 main {
@@ -54,11 +50,11 @@ main {
     margin: 10px;
     padding: 10px;
     background-color: #f0f0f0;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .product img {
@@ -77,42 +73,41 @@ main {
 }
 
 .product button {
-    background-color: #007bff; 
-    color: #fff;
+    background-color: #FF0000; 
+    color: #000; 
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .product button:hover {
-    background-color: #0056b3; 
+    background-color: #B30000; 
 }
-
 
 .alert-box {
     position: fixed;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #007bff;
-    color: #fff;
+    background-color: #FF0000; 
+    color: #fff; 
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .alert-box.show {
-    opacity: 1; 
+    opacity: 1;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333; 
+    background-color: #000; 
     color: #fff;
 }
 
@@ -123,20 +118,20 @@ footer {
 
 .contact-icons a {
     color: #fff; 
-    font-size: 24px; 
-    margin: 0 10px; 
-    transition: color 0.3s; 
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
 .contact-icons a:hover {
-    color: #007bff; 
+    color: #FF0000;
 }
 
 .category-menu ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; 
+    display: flex;
 }
 
 .category-menu li {
@@ -144,16 +139,16 @@ footer {
 }
 
 .category-menu li:last-child {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 .category-menu li a {
-    color: #fff;
+    color: #000; 
     text-decoration: none;
     transition: transform 0.3s ease;
-    padding: 10px; 
+    padding: 10px;
 }
 
 .category-menu li a:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
