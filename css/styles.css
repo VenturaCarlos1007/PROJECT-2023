@@ -1,184 +1,195 @@
+/* Estilos generales */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Oswald', sans-serif;
+    line-height: 2.0;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #93ffa1; /* Rojo */
-    color: #050a11; /* Texto negro */
-    text-align: center;
-    padding: 10px;
-}
-
-nav {
-    background-color: #599876; /* Negro */
-    padding: 5px;
-}
-
-nav ul {
+    font-size: 20px;
+  }
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; /* Para utilizar la versión en negrita (bold) de la fuente */
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: #1f2421;
+    color: #49a078;
+    padding: 1rem;
+    display: flex; /* Agregamos flexbox para alinear los íconos a la derecha */
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+    display: flex; /* Agregamos flexbox para alinear los íconos en línea */
+    align-items: center;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    margin-left: 1rem; /* Espacio entre los íconos */
+    color: #49a078; /* Color de los íconos */
+  }
 
-nav ul li {
+  nav li {
     display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #050a11; /* Texto negro */
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    color: #49a078;
     text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover {
-    transform: scale(1.2);
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product {
-    width: 300px;
-    border: 1px solid #599876;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #599876;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: scale(1.05);
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.product h2 {
-    margin-top: 10px;
-    color: #333;
-}
-
-.product p {
-    color: #555;
-}
-
-.product button {
-    background-color: #93ffa1; /* Rojo */
-    color: #000; /* Texto negro */
+  }
+  
+  /* Estilos del banner */
+  .banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem;
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+  }
+  
+  /* Estilos de la sección de productos */
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Estilos del formulario de suscripción */
+  .newsletter {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 0.5rem;
+  }
+  
+  .newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+  }
+  
 
-.product button:hover {
-    background-color: #B30000; /* Rojo más oscuro */
-}
-
-.alert-box {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FF0000; /* Rojo */
-    color: #fff; /* Texto blanco */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.alert-box.show {
-    opacity: 1;
-}
-
-footer {
+/* Estilos para el contenedor del producto */
+.productos-card {
+    border: 2px solid #ddd; /* Estilo de borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem; /* Espacio interno */
     text-align: center;
-    padding: 10px;
-    background-color: #000; /* Negro */
-    color: #fff; /* Texto blanco */
-}
-
-.contact-icons {
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-icons a {
-    color: #fff; /* Texto blanco */
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-.contact-icons a:hover {
-    color: #FF0000; /* Rojo */
-}
-
-.category-menu ul {
-    list-style: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #fff; /* Color de fondo */
+    transition: transform 0.3s ease; /* Transición de transformación para animación */
+  }
+  
+  /* Efecto de zoom cuando se pasa el cursor sobre el producto */
+  .productos-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para el formulario de búsqueda */
+  .search-form {
+    /* Eliminamos el margen derecho anterior y ajustamos el margen izquierdo para separarla a la derecha */
     margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.category-menu li {
-    margin-right: 20px;
-}
-
-.category-menu li:last-child {
-    margin-right: 0;
-}
-
-.category-menu li a {
-    color: #000; /* Texto negro */
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    padding: 10px;
-}
-
-.category-menu li a:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos para la barra de búsqueda */
-.search-bar {
+    margin-left: auto;
     display: flex;
     align-items: center;
-    border: 1px solid #93ffa1;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 20px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    width: 200px;
-    padding: 5px;
-}
-
-.search-bar button {
-    background-color: #000; /* Rojo */
-    color: #fff; /* Texto blanco */
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
+  }
+  .search-form input[type="text"] {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 0.5rem; /* Espacio interno */
+  }
+  
+  .search-form button {
+    padding: 0.5rem 1rem; /* Espacio interno del botón */
+    background-color: #49a078; /* Color de fondo del botón */
+    color: #1f2421; /* Color del texto del botón */
+    border: none; /* Quitamos el borde del botón */
     cursor: pointer;
+    margin-left: 0.5rem; /* Espacio entre el campo de búsqueda y el botón */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ /* Estilos para el menú desplegable de categorías */
+.category-dropdown {
+  /* Ajustar el estilo del menú desplegable según tus preferencias */
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  appearance: none; /* Quitamos la apariencia nativa del select */
+  background-color: #1f2421;
+  border: 2px solid #49A078;
+  padding: 0.5rem;
+  color: #49a078;
+  cursor: pointer;
 }
 
-.search-bar button:hover {
-    background-color: #93ffa1; /* Rojo más oscuro */
+/* Estilos para las opciones en el menú desplegable */
+.category-dropdown option {
+  background-color: #dce1de; /* Color de fondo de las opciones */
+  color: #333; /* Color del texto de las opciones */
+  padding: 0.5rem 1rem; /* Espacio interno de las opciones */
+  border: none; /* Quitamos el borde de las opciones */
+  font-size: 20px; /* Tamaño de fuente de las opciones */
+  cursor: pointer;
 }
+
+/* Estilo cuando se selecciona una opción en el menú desplegable */
+.category-dropdown option:checked {
+  background-color: #9cc5a1; /* Color de fondo de la opción seleccionada */
+  color: #dce1de; /* Color del texto de la opción seleccionada */
+}
+
+/* Resto de los estilos ... */
+
+/* Estilos para el contenedor del producto */
+.product-card {
+  /* Estilos del producto, sin cambios */
+}
+
+/* Estilo de recuadro cuando se pasa el cursor sobre el producto */
+.product-card:hover {
+  /* Estilos del producto al pasar el cursor sobre él, sin cambios */
+}
+
+/* Estilo para ocultar los productos inicialmente */
+#product-container .product-card {
+  display: none;
+}
+
+/* Estilo para mostrar los productos de la categoría seleccionada */
+#product-container.show .product-card {
+  display: block;
+}
+
+

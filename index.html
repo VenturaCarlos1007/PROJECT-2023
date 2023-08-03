@@ -3,135 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIENDA DON CHALO</title>
+    <title>Tienda en Línea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>TIENDA CHABELO</h1>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar productos">
-            <button onclick="searchProduct()"><i class="fas fa-search"></i></button>
-        </div>
-    </header>
-    <nav id="navMenu">
-        <ul>
-            <li><a href="#" class="nav-link" onmouseover="animateOnHover(this)">Inicio</a></li>
-            <li><a href="#" class="nav-link" onmouseover="animateOnHover(this)">Productos</a></li>
-            <li><a href="#" class="nav-link" onmouseover="animateOnHover(this)">Contacto</a></li>
-        </ul>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Productos</a>
+          <select class="category-dropdown" onchange="filterProducts(this.value)">
+            <option value="all">Todas las categorías</option>
+            <option value="tv-video">TV y Video</option>
+            <option value="audio">Audio</option>
+            <option value="cables">Cables</option>
+            <option value="energia">Energía</option>
+            <option value="seguridad">Seguridad</option>
+          </select>
+        </li>
+        <li><a href="#">Carrito</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="https://wa.me/70394620" class="social-icon"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://www.facebook.com/carlos.cv.m.90410/" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/tuperfildeinstagram" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+        <form class="search-form">
+          <input type="text" placeholder="Buscar productos">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </ul>
     </nav>
-    <nav class="category-menu" id="categoryMenu"> 
-        <ul>
-            <li><a href="#">SMARTHPHONES</a></li>
-            <li><a href="#">HOMEAUDIO</a></li>
-            <li><a href="#">COMPUTACIÓN</a></li>
-            <li><a href="#">HERRAMIENTAS</a></li>
-            <li><a href="#">CABLES TELEFONÍA CELULARESY TABLETS</a></li>
-            <li><a href="#">TV Y VIDEO</a></li>
-            <li><a href="#">VIDEOVIGILANCIA Y SEGURIDAD</a></li>
-            <li><a href="#">ILUMINACIÓN</a></li>
-            <li><a href="#">ENERGÍA</a></li>
-            <li><a href="#">CASA Y OFICINA</a></li>
-            <li><a href="#">PROYECTOS DE ELECTRÓNICA</a></li>
-            <li><a href="#">AUTOMOTRIZ</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main>
-        <section class="product">
-            <img src="catalog\category\200-384_x1.jpg" alt="Producto 1">
-            <h2>Producto 1</h2>
-            <p>Precio: $50.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\299-803RO_x1.jpg" alt="Producto 2">
-            <h2>Producto 2</h2>
-            <p>Precio: $30.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\ACCESORIOS-HDMI_3.jpg" alt="Producto 3">
-            <h2>Producto 3</h2>
-            <p>Precio: $70.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\ADAPTADORES-Y-CONVERTIDORES-DE-VIDEO_1.jpg" alt="Producto 4">
-            <h2>Producto 4</h2>
-            <p>Precio: $25.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\Antenas_para_TV.JPG" alt="Producto 5">
-            <h2>Producto 5</h2>
-            <p>Precio: $45.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\CABLES-VGA_4.jpg" alt="Producto 6">
-            <h2>Producto 6</h2>
-            <p>Precio: $60.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\CAPTURADORAS-DE-VIDEO_2.jpg" alt="Producto 7">
-            <h2>Producto 7</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\COAXIALES-POR-METRO_2.jpg" alt="Producto 8">
-            <h2>Producto 8</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\COM-5490_x1cat.jpg" alt="Producto 9">
-            <h2>Producto 9</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\CONECTORES-DE-VIDEO_2.jpg" alt="Producto 10">
-            <h2>Producto 10</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\Extensores_de_video.jpg" alt="Producto 11">
-            <h2>Producto 11</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        <section class="product">
-            <img src="catalog\category\MacBook_Pro.jpg" alt="Producto 12">
-            <h2>Producto 12</h2>
-            <p>Precio: $15.00</p>
-            <button class="add-to-cart-btn">Ver más</button>
-        </section>
-        </main>
-        <footer>
-            <div class="contact-icons">
-                <a href="https://api.whatsapp.com/send?phone=70394620" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/ventura_cxrlos/" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/carlos.cv.m.90410/" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-        </footer>
-        <script src="js\script.js"></script> 
-    </body>
-    </html>
+  </header>
 
-    
+  <main>
+    <section class="banner">
+      <h1>Tienda en Línea</h1>
+      <img src="images\banner.jpg" alt="Banner">
+      <p>Bienvenido a nuestra tienda en línea. Aquí encontrarás los mejores productos al mejor precio.</p>
+    </section>
+
+    <section class="productos" id="productos-container">
+      <div class="productos-card" data-category="tv-video">
+        <img src="catalog\category\ADAPTADORES-Y-CONVERTIDORES-DE-VIDEO_1.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="1">Agregar al carrito</button>
+      </div>
+      <div class="productos-card" data-category="audio">
+        <img src="catalog\category\Antenas_para_TV.JPG" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="2">Agregar al carrito</button>
+      </div>
+      <div class="productos-card" data-category="tv-video">
+        <img src="catalog\category\CABLES-VGA_4.jpg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="3">Agregar al carrito</button>
+      </div>
+      <div class="productos-card" data-category="tv-video">
+        <img src="catalog\category\CAPTURADORAS-DE-VIDEO_2.jpg" alt="Producto 4">
+        <h3>Producto 4</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="4">Agregar al carrito</button>
+      </div>
+      <div class="productos-card" data-category="tv-video">
+        <img src="catalog\category\COAXIALES-POR-METRO_2.jpg" alt="Producto 5">
+        <h3>Producto 5</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="5">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\COM-5490_x1cat.jpg" alt="Producto 6">
+        <h3>Producto 6</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="6">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\CONECTORES-DE-VIDEO_2.jpg" alt="Producto 7">
+        <h3>Producto 7</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="7">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\Extensores_de_video.jpg" alt="Producto 8">
+        <h3>Producto 8</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="8">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\NO_BREAK.jpg" alt="Producto 9">
+        <h3>Producto 9</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="9">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\200-384_x1.jpg" alt="Producto 10">
+        <h3>Producto 10</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="10">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\299-803RO_x1.jpg" alt="Producto 11">
+        <h3>Producto 11</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="11">Agregar al carrito</button>
+      </div>
+      <div class="productos-card tv-y-video">
+        <img src="catalog\category\ACCESORIOS-HDMI_3.jpg" alt="Producto 12">
+        <h3>Producto 12</h3>
+        <p>Precio: $19.99</p>
+        <button class="add-to-cart-btn" data-id="12">Agregar al carrito</button>
+      </div>
+      <!-- Agregar los demás productos aquí con sus respectivas categorías -->
+    </section>
+
+    <section class="newsletter">
+      <h2>Suscríbete a nuestro boletín</h2>
+      <form>
+        <input type="email" placeholder="Correo electrónico" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>TIENDA DON CHUSITO &copy; 2023 | Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js\script.js"></script>
+</body>
+</html>
