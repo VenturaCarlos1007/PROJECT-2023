@@ -102,3 +102,45 @@ categorySelect.addEventListener('change', (event) => {
   // Mostrar el contenedor de productos
   productContainer.classList.add('show');
 });
+
+// Obtener el contenedor del carrusel
+const sliderContainer = document.querySelector('.slider-container');
+// Obtener la barra de desplazamiento
+const sliderBar = document.querySelector('.slider-bar');
+
+let isMouseDown = false;
+
+// Agregar evento para detectar el clic del mouse en la barra de desplazamiento
+sliderBar.addEventListener('mousedown', () => {
+  isMouseDown = true;
+  sliderBar.style.background = '#49a078';
+});
+
+// Agregar evento para detectar el fin del clic del mouse
+document.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  sliderBar.style.background = '#fff';
+});
+
+// Agregar evento para detectar el movimiento del mouse dentro del carrusel
+sliderContainer.addEventListener('mousemove', (e) => {
+  if (!isMouseDown) return;
+  const x = e.pageX - sliderContainer.offsetLeft;
+  const percentage = (x / sliderContainer.clientWidth) * 100;
+  sliderContainer.style.animation = 'none';
+  sliderContainer.style.transform = `translateX(-${percentage}%)`;
+});
+
+// Restaurar animación y desplazamiento automático cuando el mouse sale del carrusel
+sliderContainer.addEventListener('mouseleave', () => {
+  sliderContainer.style.animation = 'sliderAnimation 15s linear infinite';
+  sliderContainer.style.transform = 'translateX(0)';
+});
+
+// Restaurar animación y desplazamiento automático cuando se suelta el mouse
+document.addEventListener('mouseup', () => {
+  if (!isMouseDown) {
+    sliderContainer.style.animation = 'sliderAnimation 15s linear infinite';
+    sliderContainer.style.transform = 'translateX(0)';
+  }
+});
