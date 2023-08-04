@@ -4,7 +4,7 @@ body {
     line-height: 2.0;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 25px;
   }
   h1 {
     font-family: 'Oswald', sans-serif;
@@ -52,7 +52,7 @@ body {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 4rem;
+    padding: 1rem;
   }
   
   .banner h1 {
@@ -65,9 +65,9 @@ body {
   }
   
   /* Estilos de la sección de productos */
-  .productos {
+  .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     padding: 2rem;
   }
@@ -97,7 +97,7 @@ body {
   
 
 /* Estilos para el contenedor del producto */
-.productos-card {
+.products-card {
     border: 2px solid #ddd; /* Estilo de borde */
     border-radius: 8px; /* Bordes redondeados */
     padding: 1rem; /* Espacio interno */
@@ -108,7 +108,7 @@ body {
   }
   
   /* Efecto de zoom cuando se pasa el cursor sobre el producto */
-  .productos-card:hover {
+  .products-card:hover {
     transform: scale(1.05);
   }
   
@@ -173,22 +173,22 @@ body {
 /* Resto de los estilos ... */
 
 /* Estilos para el contenedor del producto */
-.product-card {
+.products-card {
   /* Estilos del producto, sin cambios */
 }
 
 /* Estilo de recuadro cuando se pasa el cursor sobre el producto */
-.product-card:hover {
+.products-card:hover {
   /* Estilos del producto al pasar el cursor sobre él, sin cambios */
 }
 
 /* Estilo para ocultar los productos inicialmente */
-#product-container .product-card {
+#products-container .products-card {
   display: none;
 }
 
 /* Estilo para mostrar los productos de la categoría seleccionada */
-#product-container.show .product-card {
+#products-container.show .products-card {
   display: block;
 }
 
